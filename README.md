@@ -1,4 +1,4 @@
-# ZhrugBot
+# ZhrugBot 2021
 Рейд бот для ВК с множеством функций (OPEN SOURCE).
 # Модули для установки
 Нужно установить python 3, pyfiglet (pip install pyfiglet==0.7) и vk (pip install vk)
