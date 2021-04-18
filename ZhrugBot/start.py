@@ -3,6 +3,7 @@ import vk
 import random
 import time
 import configparser
+import json
 import pyfiglet
 from pyfiglet import Figlet
 
@@ -26,6 +27,92 @@ def defaultraid():
     sticker1input = input()
     print('Введите айди стикера для спама (2):')
     sticker2input = input()
+    print('Введите название кнопки для клавиатуры: (1)')
+    keybbut1input = input()
+    print('Введите название кнопки для клавиатуры: (2)')
+    keybbut2input = input()
+    print('Введите название кнопки для клавиатуры: (3)')
+    keybbut3input = input()
+    print('Введите название кнопки для клавиатуры: (4)')
+    keybbut4input = input()
+    print('Введите название кнопки для клавиатуры: (5)')
+    keybbut5input = input()
+    print('Введите название кнопки для клавиатуры: (6)')
+    keybbut6input = input()
+    print('(primary - синий цвет, secondary - белый цвет, negative - красный цвет, positive - зеленый цвет)')
+    print('Введите цвет кнопки: (1)')
+    keycolor1input = input()
+    print('Введите цвет кнопки: (2)')
+    keycolor2input = input()
+    print('Введите цвет кнопки: (3)')
+    keycolor3input = input()
+    print('Введите цвет кнопки: (4)')
+    keycolor4input = input()
+    print('Введите цвет кнопки: (5)')
+    keycolor5input = input()
+    print('Введите цвет кнопки: (6)')
+    keycolor6input = input()
+    keyboard = {
+        "one_time": False,
+        "buttons": [
+          [
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut1input,
+                    "payload": ""
+            },
+            "color": keycolor1input
+            },
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut2input,
+                    "payload": ""
+            },
+        "color": keycolor2input
+          }
+        ],
+        [
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut3input,
+                    "payload": ""
+            },
+        "color": keycolor3input
+          },
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut4input,
+                    "payload": ""
+            },
+        "color": keycolor4input
+          }
+        ],
+        [
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut5input,
+                    "payload": ""
+            },
+        "color": keycolor5input
+          },
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut6input,
+                    "payload": ""
+            },
+        "color": keycolor6input
+            }
+          ]
+        ]
+    }
+    keyboard = json.dumps(keyboard, ensure_ascii=False).encode('utf-8')
+    keyboard = str(keyboard.decode('utf-8'))
     print('(если вы пригласили бота в первую беседу то айди 1,')
     print('если во вторую беседу то айди 2 и т.д)')
     print('Введите айди беседы:')
@@ -33,6 +120,8 @@ def defaultraid():
     print('Введите тайм аут отправки сообщений (от 0.1 до 99999999):')
     timeoutinput = input()
     timeoutinput = int(float(timeoutinput))
+    keybrnd = random.randint(0, 200000000)
+    vk_api.messages.send(chat_id=idbesedi, message='​⠀​', keyboard=keyboard, random_id=keybrnd, v=5.45)
     while True:
         rndid1 = random.randint(0, 200000000)
         rndid2 = random.randint(0, 200000000)
@@ -78,6 +167,92 @@ def multipleraid():
     sticker1input = input()
     print('Введите айди стикера для спама (2):')
     sticker2input = input()
+    print('Введите название кнопки для клавиатуры: (1)')
+    keybbut1input = input()
+    print('Введите название кнопки для клавиатуры: (2)')
+    keybbut2input = input()
+    print('Введите название кнопки для клавиатуры: (3)')
+    keybbut3input = input()
+    print('Введите название кнопки для клавиатуры: (4)')
+    keybbut4input = input()
+    print('Введите название кнопки для клавиатуры: (5)')
+    keybbut5input = input()
+    print('Введите название кнопки для клавиатуры: (6)')
+    keybbut6input = input()
+    print('(primary - синий цвет, secondary - белый цвет, negative - красный цвет, positive - зеленый цвет)')
+    print('Введите цвет кнопки: (1)')
+    keycolor1input = input()
+    print('Введите цвет кнопки: (2)')
+    keycolor2input = input()
+    print('Введите цвет кнопки: (3)')
+    keycolor3input = input()
+    print('Введите цвет кнопки: (4)')
+    keycolor4input = input()
+    print('Введите цвет кнопки: (5)')
+    keycolor5input = input()
+    print('Введите цвет кнопки: (6)')
+    keycolor6input = input()
+    keyboard = {
+        "one_time": False,
+        "buttons": [
+          [
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut1input,
+                    "payload": ""
+            },
+            "color": keycolor1input
+            },
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut2input,
+                    "payload": ""
+            },
+        "color": keycolor2input
+          }
+        ],
+        [
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut3input,
+                    "payload": ""
+            },
+        "color": keycolor3input
+          },
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut4input,
+                    "payload": ""
+            },
+        "color": keycolor4input
+          }
+        ],
+        [
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut5input,
+                    "payload": ""
+            },
+        "color": keycolor5input
+          },
+            {
+                "action": {
+                    "type": "text",
+                    "label": keybbut6input,
+                    "payload": ""
+            },
+        "color": keycolor6input
+            }
+          ]
+        ]
+    }
+    keyboard = json.dumps(keyboard, ensure_ascii=False).encode('utf-8')
+    keyboard = str(keyboard.decode('utf-8'))
     print('(если вы пригласили бота в первую беседу то айди 1,')
     print('если во вторую беседу то айди 2 и т.д)')
     print('Введите айди беседы:')
@@ -85,6 +260,8 @@ def multipleraid():
     print('Введите тайм аут отправки сообщений (от 0.1 до 99999999):')
     timeoutinput = input()
     timeoutinput = int(float(timeoutinput))
+    keybrnd = random.randint(0, 200000000)
+    vk_api1.messages.send(chat_id=idbesedi, message='​⠀​', keyboard=keyboard, random_id=keybrnd, v=5.45)
     while True:
         rndid1 = random.randint(0, 200000000)
         rndid2 = random.randint(0, 200000000)
@@ -115,7 +292,7 @@ def multipleraid():
     
 def loadpreset():
     config = configparser.ConfigParser()
-    config.read("settings.ini")
+    config.read("settings.ini", encoding='utf-8')
     typer = config["preset"]["type"]
     typer = int(typer)
     if typer == 1:
@@ -133,7 +310,82 @@ def loadpreset():
         ses1 = vk.Session(access_token=token)
         vk_api1 = vk.API(ses1)
         timeot = int(float(timeot))
+        buttontext1 = config["keyboard"]["buttontext1"]
+        buttontext2 = config["keyboard"]["buttontext2"]
+        buttontext3 = config["keyboard"]["buttontext3"]
+        buttontext4 = config["keyboard"]["buttontext4"]
+        buttontext5 = config["keyboard"]["buttontext5"]
+        buttontext6 = config["keyboard"]["buttontext6"]
+        buttoncolor1 = config["keyboard"]["buttoncolor1"]
+        buttoncolor2 = config["keyboard"]["buttoncolor2"]
+        buttoncolor3 = config["keyboard"]["buttoncolor3"]
+        buttoncolor4 = config["keyboard"]["buttoncolor4"]
+        buttoncolor5 = config["keyboard"]["buttoncolor5"]
+        buttoncolor6 = config["keyboard"]["buttoncolor6"]
+        keyboard1 = {
+            "one_time": False,
+            "buttons": [
+            [
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext1,
+                        "payload": ""
+                },
+                "color": buttoncolor1
+                },
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext2,
+                        "payload": ""
+                },
+            "color": buttoncolor2
+            }
+            ],
+            [
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext3,
+                        "payload": ""
+                },
+            "color": buttoncolor3
+            },
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext4,
+                        "payload": ""
+                },
+            "color": buttoncolor4
+            }
+            ],
+            [
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext5,
+                        "payload": ""
+                },
+            "color": buttoncolor5
+            },
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext6,
+                        "payload": ""
+                },
+            "color": buttoncolor6
+                }
+            ]
+            ]
+        }
+        keyboard1 = json.dumps(keyboard1, ensure_ascii=False).encode('utf-8')
+        keyboard1 = str(keyboard1.decode('utf-8'))
         print('[INFO] Пресет загружен!')
+        keybrnd = random.randint(0, 200000000)
+        vk_api1.messages.send(chat_id=idbes, message='​⠀​', keyboard=keyboard1, random_id=keybrnd, v=5.45)
         while True:
             rndid1 = random.randint(0, 200000000)
             rndid2 = random.randint(0, 200000000)
@@ -174,8 +426,82 @@ def loadpreset():
         ses2 = vk.Session(access_token=token2)
         vk_api2 = vk.API(ses2)
         timeot = int(float(timeot))
-        
+        buttontext1 = config["keyboard"]["buttontext1"]
+        buttontext2 = config["keyboard"]["buttontext2"]
+        buttontext3 = config["keyboard"]["buttontext3"]
+        buttontext4 = config["keyboard"]["buttontext4"]
+        buttontext5 = config["keyboard"]["buttontext5"]
+        buttontext6 = config["keyboard"]["buttontext6"]
+        buttoncolor1 = config["keyboard"]["buttoncolor1"]
+        buttoncolor2 = config["keyboard"]["buttoncolor2"]
+        buttoncolor3 = config["keyboard"]["buttoncolor3"]
+        buttoncolor4 = config["keyboard"]["buttoncolor4"]
+        buttoncolor5 = config["keyboard"]["buttoncolor5"]
+        buttoncolor6 = config["keyboard"]["buttoncolor6"]
+        keyboard1 = {
+            "one_time": False,
+            "buttons": [
+            [
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext1,
+                        "payload": ""
+                },
+                "color": buttoncolor1
+                },
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext2,
+                        "payload": ""
+                },
+            "color": buttoncolor2
+            }
+            ],
+            [
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext3,
+                        "payload": ""
+                },
+            "color": buttoncolor3
+            },
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext4,
+                        "payload": ""
+                },
+            "color": buttoncolor4
+            }
+            ],
+            [
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext5,
+                        "payload": ""
+                },
+            "color": buttoncolor5
+            },
+                {
+                    "action": {
+                        "type": "text",
+                        "label": buttontext6,
+                        "payload": ""
+                },
+            "color": buttoncolor6
+                }
+            ]
+            ]
+        }
+        keyboard1 = json.dumps(keyboard1, ensure_ascii=False).encode('utf-8')
+        keyboard1 = str(keyboard1.decode('utf-8'))
         print('[INFO] Пресет загружен!')
+        keybrnd = random.randint(0, 200000000)
+        vk_api1.messages.send(chat_id=idbes, message='​⠀​', keyboard=keyboard1, random_id=keybrnd, v=5.45)
         while True:
             rndid1 = random.randint(0, 200000000)
             rndid2 = random.randint(0, 200000000)
